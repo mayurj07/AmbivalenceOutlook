@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MST</title>
+    <meta charset="utf-8">
+
+    <!-- for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Latest compiled CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<script>
+    $(function () {
+        $('[data-toggle=popover]').popover({
+            trigger: 'hover',
+            html: true,
+            content: function () {
+                var mj = $('#mj');
+                var sg = $('#sg');
+                var tan = $('#tan');
+
+                if (mj.is(":hover")) {
+                    return '<img src="images/Team/Mayur.jpg" alt="Mayur" class="img-responsive center-block" /> <p><b>Mayur Jain</b></p><p>Full Stack Developer<a href="https://linkedin.com/"><i class="fa fa-linkedin"></p>';
+                }
+                else if (sg.is(":hover")) {
+                    return '<img src="images/Team/Surbhi.jpeg" alt="Surbhi" class="img-responsive center-block" /> <p><b>Surbhi Garg</b></p> <p> Data Scientist<a href="https://linkedin.com/"><i class="fa fa-linkedin"></p>';
+                }
+                else if (tan.is(":hover")) {
+                    return '<img src="images/Team/TanveerKaur.jpg" alt="Tanveer" class="img-responsive center-block" /> <p><b>Tanveer Kaur</b></p> <p>Web Developer <a href="https://linkedin.com/"><i class="fa fa-linkedin">';
+                }
+            },
+            title: ''
+        })
+    });
+</script>
+
+<body>
+
+<div class="container-fluid">
+
+    <!--navigation bar-->
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="main.html"><img src="images/MST.png" width="55" height="33"></a>
+            </div>
+
+            <div>
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li class="active" id="home">
+                        <a href="main.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    </li>
+                    <li>
+                        <a style="color: #FFFFFF" href="/globe"><i class="fa fa-globe" aria-hidden="true"></i> Globe</a>
+                    </li>
+                    <li>
+                        <a style="color: #FFFFFF" href="/tweets"><i class="fa fa-twitter"></i> Tweets</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+
+    <br><br>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 style="text-align: center;">Ambivalence Outlook</h1>
+
+            <p> It is a Twitter Sentiment Analysis platform where users can visualize and quantify the amount of love and hatred in the world.</p>
+            <p> It uses PubNub’s data stream network to send and receive JSON data i.e. the tweets containing the word ‘love’ and hate’ respectively.</p>
+            <p> It helps to break down the twitter activity and gain powerful insights on the ambivalence in this world.</p>
+            <p> Ambivalence, being a non-quantifiable data, is difficult to calculate or visualize.</p>
+            <p> Here we have attempted to assess it through WebGL visualization.</p>
+            <p> This tool is created to understand what causes intolerance and what makes people love this world.</p>
+            <p> It is an attempt to visualize these emotions on the world map/globe through the help of WebGL.</p>
+        </div>
+    </div>
+
+    <br>
+
+    <h1 style="text-align: center">Executive Team</h1>
+
+
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div id="team" class="row">
+            <div class="col-lg-4">
+                <img class="img-circle" src="images/Team/Mayur.jpg" alt="Generic placeholder image" width="260"
+                     height="260">
+
+                <h2>Mayur Jain</h2>
+
+                <p>Full Stack Engineer</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="img-circle" src="images/Team/Surbhi.jpeg" alt="Generic placeholder image" width="260"
+                     height="260">
+
+                <h2>Surbhi Garg</h2>
+
+                <p>Data Scientist</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="img-circle" src="images/Team/TanveerKaur.jpg" alt="Generic placeholder image" width="260"
+                     height="260">
+
+                <h2>Tanveer Kaur</h2>
+
+                <p>Web Developer</p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        <div>
+        </div>
+
+        <br><br><br><br>
+
+
+    </div>
+</div>
+
+</body>
+</html>

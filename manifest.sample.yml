@@ -1,0 +1,12 @@
+---
+applications:
+- name: twitterglobe
+  memory: 256M
+  instances: 1
+  env:
+    TWITTER_CONSUMER_KEY: X8K3OziLCl8PkZ4XBMWrrcqh6
+    TWITTER_CONSUMER_SECRET: RzcJ0faLt9a6l9WPZCJf6clWbbKfj4gjsJviE9vQLim842A8or
+    TWITTER_ACCESS_TOKEN: 2490060594-fxuNYgVetPrj7AkXKhxFvHVMz88noF17w8Jebt3
+    TWITTER_TOKEN_SECRET: YGHpdbYBhZN4TKmfiIcDeA3TvYuIjQ4zgOlQBpTW2DDyy
+    PUBNUB_PUBLISH_KEY: pub-c-9b1fea85-5eea-4724-a815-97a9e66d5319
+    PUBNUB_SUBSCRIBE_KEY: sub-c-874c777e-0ddc-11e6-8c3e-0619f8945a4f

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TweetAmbivalence">
+<head>
+    <meta charset="utf-8">
+    <title>Ambivalence Outlook</title>
+
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700|Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+
+    <!-- for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Latest compiled CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="//platform.twitter.com/widgets.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pubnub/3.6.3/pubnub.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular-resource.min.js"></script>
+    <script src="/vendor/pubnub-angular/lib/pubnub-angular.js"></script>
+
+    <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+    <script src="/javascripts/liquidFillGauge.js" language="JavaScript"></script>
+
+
+    <!--Pubnub Config-->
+    <script>
+        // PubNub config rendered server side so that config is in one place
+        var pubnubConfig = {
+            subscribe_key: '<%= subscribe_key %>',
+            channel: '<%= channel %>'
+        }
+    </script>
+
+</head>
+<body>
+
+<!--navigation bar-->
+<nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="main.html"><img src="images/MST.png" width="55" height="33"></a>
+        </div>
+
+        <div>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li id="home">
+                    <a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                </li>
+                <li>
+                    <a style="color: #FFFFFF" href="/globe"><i class="fa fa-globe" aria-hidden="true"></i> Globe</a>
+                </li>
+                <li class="active">
+                    <a style="color: #FFFFFF" href="/tweets"><i class="fa fa-twitter"></i> Tweets</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Container for the Angular application -->
+<div ng-controller="TweetChart">
+    <!--Page Content-->
+    <div class="container">
+        <div class="page-header">
+            <div class="col-md-10">
+                <h1 class="text-primary">Twitter Analyzer</h1>
+            </div>
+            <div id="total" class="col-md-2"></div>
+        </div>
+        <!-- Table to show statistics-->
+        <table class="table table-striped">
+            <tbody>
+            <tr>
+                <td>
+                    <h3>Count of Tweets with 'Love'</h3>
+                </td>
+                <td>
+                    <div id="lcount"></div>
+                </td>
+                <td>
+                    <h3>Count of Tweets with 'Hate'</h3>
+                </td>
+                <td>
+                    <div id="hcount"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Percentage of Tweets with 'Love'</h3>
+                </td>
+                <td>
+                    <!--<div id="lpercent"></div>-->
+                    <svg id="fillLoveGauge" style="width: 100px; height: 100px; margin-left: -30%; margin-top: -3%;"></svg>
+                </td>
+                <td>
+                    <h3>Percentage of Tweets with 'Hate'</h3>
+                </td>
+                <td>
+                    <!--<div id="hpercent"></div>-->
+                    <svg id="fillHateGauge" style="width: 100px; height: 100px; margin-left: -30%; margin-top: -3%;"></svg>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <!--Table to show tweets.-->
+        <div class="row">
+            <div class="col-md-6">
+                <div id="l-message-metric" class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Tweets containing 'Love'</h3>
+                    </div>
+                </div>
+                <div id="lbody" class="panel-body"></div>
+            </div>
+            <div class="col-md-6">
+                <div id="h-message-metric" class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Tweets containing'Hate'</h3>
+                    </div>
+                </div>
+                <div id="hbody" class="panel-body"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/javascripts/angular/TweetAmbivalence.js"></script>
+
+</body>
+</html>
