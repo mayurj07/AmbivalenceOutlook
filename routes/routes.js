@@ -1,8 +1,6 @@
     var express = require('express');
     var router = express.Router();
-    //var fs = require('fs');
     var nconf = require('nconf');
-    //var moment = require('moment');
     var tweetPublisher = require('./tweet-publisher');
     var path = require('path');
 
@@ -41,6 +39,12 @@
             subscribe_key: nconf.get('PUBNUB_SUBSCRIBE_KEY'),
             channel: 'tweet_message'
         });
+    });
+
+
+    router.get('/heatmap', function (req, res) {
+        var filepath = path.join(__dirname, '../public/heatmap');
+        res.render(filepath);
     });
 
 

@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/routes');
 var app = express();
 
+
+
 // define static assets before main middleware if running on prod (Heroku workaround)
 if (app.get('env') === 'production') {
   app.use(express.static(path.join(__dirname, 'public')));

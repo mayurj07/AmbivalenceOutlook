@@ -123,7 +123,7 @@ function publishTweet(tweet) {
         }
     });
 
-    updateCount(tweet, function(ambivalence){
+    updateCount(tweet, function (ambivalence) {
 
         //Sending count, image, tweet and percentage to pubnub client
         pubnub.publish({
@@ -135,33 +135,34 @@ function publishTweet(tweet) {
             }
         });
     });
-}
 
 
-function updateCount(tweet, cb) {
+    function updateCount(tweet, cb) {
 
-    if (tweet['text'].toLowerCase().indexOf('love') >= 0) {
-        love_count += 1;
+        if (tweet['text'].toLowerCase().indexOf('love') >= 0) {
+            love_count += 1;
+        }
+        if (tweet['text'].toLowerCase().indexOf('hate') > -1) {
+            hate_count += 1;
+        }
+        total = love_count + hate_count;
+        love_percent = Math.round((love_count / total) * 100);
+        hate_percent = Math.round((hate_count / total) * 100);
+
+        var message = {
+            l_count: love_count,
+            h_count: hate_count,
+            l_percent: love_percent,
+            h_percent: hate_percent,
+            total: total,
+            text: tweet.text,
+            name: tweet.user.screen_name,
+            url: tweet.user.profile_image_url
+        };
+
+        cb(message);
     }
-    if (tweet['text'].toLowerCase().indexOf('hate') > -1) {
-        hate_count += 1;
-    }
-    total = love_count + hate_count;
-    love_percent = Math.round((love_count / total) * 100);
-    hate_percent = Math.round((hate_count / total) * 100);
 
-    var message = {
-        l_count: love_count,
-        h_count: hate_count,
-        l_percent: love_percent,
-        h_percent: hate_percent,
-        total: total,
-        text: tweet.text,
-        name: tweet.user.screen_name,
-        url: tweet.user.profile_image_url
-    };
-
-    cb(message);
-}
+}//end
 
 module.exports = TweetPublisher;
