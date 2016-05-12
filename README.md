@@ -40,8 +40,18 @@ npm start
 
 Go to [http://localhost:3000](http://localhost:3000) in your browser.
 
+Features:
+----
 
-Project Screenshots:
+Search Engine Optimization Enabled (Google 'AmbilvalenceOutlook')
+
+Localization Implemented (Supoort for language translation)
+
+Cross Browser Compatibile
+
+Responsive Webpages
+
+Screenshots:
 ----
 
 Homepage:
