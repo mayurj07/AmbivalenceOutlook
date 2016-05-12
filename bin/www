@@ -54,8 +54,7 @@ io.sockets.on('connection', function (socket) {
                         //If so then build up some nice json and send out to web sockets
                         var outputPoint = {
                             "lat": data.coordinates.coordinates[0],
-                            "lng": data.coordinates.coordinates[1],
-                            "love": true
+                            "lng": data.coordinates.coordinates[1]
                         };
 
                         socket.broadcast.emit("twitter-stream", outputPoint);
@@ -65,7 +64,7 @@ io.sockets.on('connection', function (socket) {
                 }
 
                 stream.on('limit', function (limitMessage) {
-                    //return console.log(limitMessage);
+                    return console.log(limitMessage);
                 });
 
                 stream.on('warning', function (warning) {
