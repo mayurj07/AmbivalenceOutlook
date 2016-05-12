@@ -15,13 +15,14 @@ nconf.defaults({
 });
 app.set('port', nconf.get("PORT"));
 
-var server = app.listen(nconf.get("PORT"), nconf.get("BIND_IP"), function () {
+var server = app.listen(nconf.get("PORT"), function () {
     console.log('App server listening on ' + server.address().address + ', port ' + server.address().port);
     console.log('Process ' + process.pid + ' is listening to all incoming requests');
 });
 
-var io = require('socket.io').listen(server);
+//nconf.get("BIND_IP")
 
+var io = require('socket.io').listen(server);
 
 var twitter = new Twit({
     consumer_key: nconf.get('TWITTER_CONSUMER_KEY'),
@@ -64,7 +65,7 @@ io.sockets.on('connection', function (socket) {
                 }
 
                 stream.on('limit', function (limitMessage) {
-                    return console.log(limitMessage);
+                    //return console.log(limitMessage);
                 });
 
                 stream.on('warning', function (warning) {

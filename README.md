@@ -19,7 +19,7 @@ Clone GitHub repo:
 https://github.com/mayurj07/AmbivalenceOutlook
 ```
 
-Optionally, install the [Compass](http://compass-style.org/) Ruby Gem.
+Install the [Compass](http://compass-style.org/) Ruby Gem.
 
 ```
 gem install compass
