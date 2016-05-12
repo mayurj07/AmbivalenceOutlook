@@ -44,19 +44,19 @@ Go to [http://localhost:3000](http://localhost:3000) in your browser.
 Project Screenshots:
 ----
 
-1. Homepage:
+Homepage:
 
 ![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/blob/master/screenshots/Home.png)
 
-2. WebGL Globe:
+WebGL Globe:
 
 ![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/blob/master/screenshots/globe.png)
 
-3. Tweets with Liquid Fill Gauge
+Tweets with Liquid Fill Gauge
 
 ![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/blob/master/screenshots/gauge.png)
 
-4. Heat Map
+Heat Map
 
 ![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/blob/master/screenshots/HeatMap.png)
 
