@@ -48,11 +48,22 @@ Homepage:
 
 ![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/blob/master/screenshots/Home.png)
 
-WebGL Globe:
+WebGL Globe: The screenshot represents the live tweets with the nature of the tweets on WebGL Globe with the sentiment score. 
+             The strand base color is set according to the sentiment score.
+             
+  a. When tweet.sentiment.score < 0
+     Color = Red
+
+  b. When tweet.sentiment.score > 0  
+     Color = Yellow;
+
+  c. When tweet.sentiment.score = 0  
+     Color = White; 
 
 ![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/blob/master/screenshots/globe.png)
 
-Tweets with Liquid Fill Gauge
+Tweets with Liquid Fill Gauge: As the user clicks on Tweets tab it will display detailed description about the tweet. 
+                               It is also displaying Count of Tweets with 'Love', Count of Tweets with ‘Hate’, Percentage of Tweets with 'Love', Percentage of Tweets with ‘Hate’ and the total count of the tweets with the help of Liquid Fill Gauge.
 
 ![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/blob/master/screenshots/gauge.png)
 
