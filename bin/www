@@ -34,8 +34,6 @@ stream = null;
 
 io.sockets.on('connection', function (socket) {
 
-    console.log("socket connected");
-
     socket.on("start tweets", function () {
 
         if (stream === null) {
@@ -64,17 +62,18 @@ io.sockets.on('connection', function (socket) {
                     }
                 }
 
-                stream.on('limit', function (limitMessage) {
-                    //return console.log(limitMessage);
-                });
+            });
 
-                stream.on('warning', function (warning) {
-                    return console.log(warning);
-                });
+            stream.on('limit', function (limitMessage) {
+                return console.log(limitMessage);
+            });
 
-                stream.on('disconnect', function (disconnectMessage) {
-                    return console.log(disconnectMessage);
-                });
+            stream.on('warning', function (warning) {
+                return console.log(warning);
+            });
+
+            stream.on('disconnect', function (disconnectMessage) {
+                return console.log(disconnectMessage);
             });
         }
     });
