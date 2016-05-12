@@ -46,21 +46,21 @@ Project Screenshots:
 
 1. Homepage:
 
-![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/screenshots/Home.png)
+![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/blob/master/screenshots/Home.png)
 
 2. WebGL Globe:
 
-![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/screenshots/WebGLGlobe.png)
+![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/blob/master/screenshots/WebGLGlobe.png)
 
 3. Tweets with Liquid Fill Gauge
 
-![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/screenshots/gauge.png)
+![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/blob/master/screenshots/gauge.png)
 
 4. Heat Map
 
-![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/screenshots/HeatMap.png)
+![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/blob/master/screenshots/HeatMap.png)
 
-![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/screenshots/Heatmap2.png)
+![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/blob/master/screenshots/Heatmap2.png)
 
 
 
