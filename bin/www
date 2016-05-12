@@ -16,7 +16,7 @@ nconf.defaults({
 app.set('port', nconf.get("PORT"));
 
 var server = app.listen(nconf.get("PORT"), function () {
-    console.log('App server listening on ' + server.address().address + ', port ' + server.address().port);
+    console.log('App server listening on port ' + server.address().port);
     console.log('Process ' + process.pid + ' is listening to all incoming requests');
 });
 
