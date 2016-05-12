@@ -50,7 +50,7 @@ Project Screenshots:
 
 2. WebGL Globe:
 
-![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/blob/master/screenshots/WebGLGlobe.png)
+![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/blob/master/screenshots/globe.png)
 
 3. Tweets with Liquid Fill Gauge
 
