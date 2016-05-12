@@ -49,7 +49,8 @@ Homepage:
 ![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/blob/master/screenshots/Home.png)
 
 WebGL Globe: The screenshot represents the live tweets with the nature of the tweets on WebGL Globe with the sentiment score. 
-             The strand base color is set according to the sentiment score
+             The strand base color is set according to the sentiment score.
+             
   a. When tweet.sentiment.score < 0
      Color = Red
 
