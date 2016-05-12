@@ -39,3 +39,28 @@ npm start
 ```
 
 Go to [http://localhost:3000](http://localhost:3000) in your browser.
+
+
+Project Screenshots:
+----
+
+1. Homepage:
+
+![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/screenshots/Home.png)
+
+2. WebGL Globe:
+
+![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/screenshots/WebGLGlobe.png)
+
+3. Tweets with Liquid Fill Gauge
+
+![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/screenshots/gauge.png)
+
+4. Heat Map
+
+![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/screenshots/HeatMap.png)
+
+![alt tag](https://github.com/mayurj07/AmbivalenceOutlook/screenshots/Heatmap2.png)
+
+
+
